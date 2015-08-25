@@ -1,0 +1,73 @@
+<%= form_for(@plan, html: { class: "custom"}) do |f| %>
+
+   <div class="row">
+     <div class="small-2 columns">
+       <%= f.label :name, class: "right inline", title: "Formal Name for the Plan", data: {tooltip: true } %>
+     </div>
+     <div class="small-10 columns">
+       <%= f.text_field :name, placeholder: "Formal name" %>
+     </div> 
+     
+   </div>
+
+
+   <div class="row">
+     <div class="small-2 columns">
+       <%= f.label :category, class: "right inline", title: "Plan Category", data: {tooltip: true } %>
+     </div>
+     <div class="small-10 columns">
+         <%= f.select(:category, options_for_select(category_options), :include_blank => true, :prompt => "Select a option") %>
+
+     </div> 
+   </div>
+
+   <div class="row">
+     <div class="small-2 columns">
+       <%= f.label :network, class: "right inline", title: "Config the Category", data: {tooltip: true } %>
+     </div>
+     <div class="small-10 columns">
+         <%= f.select(:network, options_for_select(plan_selects(:network_options)), :include_blank => true, :prompt => "Select a network") %>
+
+     </div> 
+   </div>
+
+   <div class="row">
+     <div class="small-2 columns">
+       <%= f.label :description, class: "right inline", title: "A catchy description of the plan", data: {tooltip: true } %>
+     </div>
+     <div class="small-10 columns">
+       <%= f.text_field :description, placeholder: "A catchy description of the plan" %>
+     </div> 
+   </div>
+   
+   <div class="row">
+     <div class="small-2 columns">
+       <%= f.label :type, class: "right inline", title: "the type", data: {tooltip: true } %>
+     </div>
+     <div class="small-10 columns">
+         <%= f.select(:type, options_for_select(plan_selects(:type_options)), :include_blank => true, :prompt => "Select a type") %>
+
+     </div> 
+   </div>
+  
+
+   <div class="row">
+     <div class="small-2 columns">
+       <%= f.label :industry_id, class: "right inline", title: "Map the industry Id", data: {tooltip: true } %>
+     </div>
+     <div class="small-10 columns">
+         <%= f.select(:industry_id, options_for_select(plan_selects(:industry_id_options)), :include_blank => true, :prompt => "Map the industry Id") %>
+
+     </div> 
+   </div>
+
+
+
+   <div class="row">
+     <div class="small-10 small-offset-2 columns">
+       <%= f.submit 'Submit', :class => 'button small' %>
+     </div>
+   </div>
+   
+   
+<% end %>

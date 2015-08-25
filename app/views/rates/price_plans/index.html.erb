@@ -1,0 +1,23 @@
+<div class="row">
+   <div class="large-2 columns">
+      "icon_bar"
+      <%= link_to "New Plan", new_rates_price_plan_path, class: :button%>
+   </div>
+   <div class="large-10 columns">
+      <div class="row">
+         <div id="search"></div>
+      </div>
+      <div class="row">
+         <div class="large-7 columns">
+            <div id = "plans">
+               <%= render 'price_plans'%>
+            </div>
+         </div>
+         <div class="large-5 columns">
+            <div id='plan'></div>
+         </div>
+         
+      </div>
+   </div>
+</div>
+
