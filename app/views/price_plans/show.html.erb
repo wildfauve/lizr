@@ -1,0 +1,46 @@
+<div class="row">
+   <div class="small-1 columns">
+      Name
+   </div>
+   <div class="small-5 columns">
+     <%= @plan.name %>
+   </div>
+   <div class="small-1 columns">
+      Category
+   </div>
+   <div class="small-5 columns">
+     <%= @plan.category %>
+   </div>
+</div>
+
+<div class="row">
+   <div class="small-1 columns">
+      Network
+   </div>
+   <div class="small-5 columns">
+     <%= @plan.network %>
+   </div>
+   <div class="small-1 columns">
+      Description
+   </div>
+   <div class="small-5 columns">
+     <%= @plan.description %>
+   </div>
+</div>
+
+<div class="row">
+   <div class="small-1 columns">
+      Type
+   </div>
+   <div class="small-5 columns">
+     <%= @plan.type %>
+   </div>
+   <div class="small-1 columns">
+      Industry Id
+   </div>
+   <div class="small-5 columns">
+     <%= @plan.industry_id %>
+   </div>
+</div>
+
+<%= link_to "Plans", rates_price_plans_path, class: "button" %>

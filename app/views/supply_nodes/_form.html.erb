@@ -1,0 +1,26 @@
+<%= form_for([@plan, @supply], remote: true, html: { class: "custom"}) do |f| %>
+
+   <div class="row">
+     <div class="small-2 columns">
+       <%= f.label :registered_price_category, class: "right inline", title: "", data: {tooltip: true } %>
+     </div>
+     <div class="small-10 columns">
+       <%= f.text_field :registered_price_category, placeholder: "" %>
+     </div>
+
+   </div>
+
+   <div class="row">
+     <div class="small-10 small-offset-2 columns">
+       <%= f.submit 'Submit', :class => 'button small' %>
+     </div>
+   </div>
+
+
+<% end %>
+
+<div id="create-charges">
+</div>
+
+<div id="new-change-form">
+</div>

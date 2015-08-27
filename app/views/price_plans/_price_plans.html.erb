@@ -1,0 +1,6 @@
+<% @plans.each do |plan|%>
+  <div class="panel">
+    <%= render partial: "price_plan", locals: {plan: plan} %>
+ </div>
+
+<% end %>

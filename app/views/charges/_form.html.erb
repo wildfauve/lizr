@@ -1,0 +1,26 @@
+<%= form_for([@plan, @charge], node: @node, node_type: @node_type,  html: { class: "custom"}) do |f| %>
+
+  <div class="row">
+    <div class="small-2 columns">
+      <%= f.label :type, class: "right inline", title: "Type of Charge", data: {tooltip: true } %>
+    </div>
+    <div class="small-10 columns">
+        <%= f.select(:type, options_for_select(charges_select(:charge_type)), :include_blank => true, :prompt => "Select a option") %>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="small-2 columns">
+      <%= f.label :price_setter, class: "right inline", title: "WHo Set the Price", data: {tooltip: true } %>
+    </div>
+    <div class="small-10 columns">
+        <%= f.select(:price_setter, options_for_select(charges_select(:price_setter_type)), :include_blank => true, :prompt => "Select a option") %>
+    </div>
+
+  </div>
+
+  <%= render partial: "periods" %>
+
+
+<% end %>
